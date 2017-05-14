@@ -1,0 +1,29 @@
+{
+  "name": "@sonicdoe/generator-node",
+  "version": "0.0.0",
+  "description": "Scaffold out a Node.js module",
+  "keywords": [
+    "yeoman-generator",
+    "scaffold",
+    "boilerplate",
+    "node.js",
+    "node",
+    "module",
+    "package"
+  ],
+  "license": "ISC",
+  "repository": "sonicdoe/generator-node",
+  "author": "Jakob Krigovsky <jakob@krigovsky.com>",
+  "files": [
+    "app"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^1.1.1"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
