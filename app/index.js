@@ -2,4 +2,16 @@
 
 const Generator = require('yeoman-generator')
 
-module.exports = class extends Generator {}
+module.exports = class extends Generator {
+  writing () {
+    this.fs.copy(
+      this.templatePath('*'),
+      this.destinationPath(),
+      {
+        globOptions: {
+          dot: true
+        }
+      }
+    )
+  }
+}
