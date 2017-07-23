@@ -1,0 +1,26 @@
+{
+  "name": "my-awesome-package",
+  "version": "0.0.0",
+  "description": "My short description of my awesome package",
+  "keywords": [
+    "short",
+    "relevant",
+    "keywords",
+    "for",
+    "searching"
+  ],
+  "license": "ISC",
+  "repository": "sonicdoe/my-awesome-package",
+  "author": "Jakob Krigovsky <jakob@krigovsky.com>",
+  "files": [],
+  "scripts": {
+    "test": "standard && ava"
+  },
+  "devDependencies": {
+    "ava": "^0.21.0",
+    "standard": "^10.0.2"
+  },
+  "engines": {
+    "node": ">=4"
+  }
+}
