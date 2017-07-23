@@ -1,5 +1,5 @@
 {
-  "name": "my-awesome-package",
+  "name": "<%= name %>",
   "version": "0.0.0",
   "description": "My short description of my awesome package",
   "keywords": [
@@ -10,7 +10,7 @@
     "searching"
   ],
   "license": "ISC",
-  "repository": "sonicdoe/my-awesome-package",
+  "repository": "sonicdoe/<%= name %>",
   "author": "Jakob Krigovsky <jakob@krigovsky.com>",
   "files": [],
   "scripts": {

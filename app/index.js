@@ -4,7 +4,10 @@ const Generator = require('yeoman-generator')
 
 module.exports = class extends Generator {
   prompting () {
-    const prompts = []
+    const prompts = [{
+      name: 'name',
+      message: 'Package Name:'
+    }]
 
     return this.prompt(prompts).then(answers => {
       this.answers = answers

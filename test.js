@@ -16,3 +16,21 @@ test('generates expected files', async t => {
     'package.json'
   ])
 })
+
+test('uses prompt input for package.json’s `name` field', async t => {
+  await helpers.run(appPath)
+    .withPrompts({
+      name: 'my-awesome-package'
+    })
+
+  assert.fileContent('package.json', '"name": "my-awesome-package"')
+})
+
+test('uses prompt input for package.json’s `repository` field', async t => {
+  await helpers.run(appPath)
+    .withPrompts({
+      name: 'my-awesome-package'
+    })
+
+  assert.fileContent('package.json', '"repository": "sonicdoe/my-awesome-package"')
+})
