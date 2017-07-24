@@ -56,3 +56,21 @@ test('uses prompt input for package.json’s `keywords` field', async t => {
 
   assert.fileContent('package.json', '"keywords": [\n    "short",\n    "relevant"\n  ]')
 })
+
+test('uses prompt input for package.json’s `author` field', async t => {
+  await helpers.run(appPath)
+    .withPrompts({
+      userName: 'Your Name'
+    })
+
+  assert.fileContent('package.json', '"author": "Your Name ')
+})
+
+test('uses prompt input for LICENSE', async t => {
+  await helpers.run(appPath)
+    .withPrompts({
+      userName: 'Your Name'
+    })
+
+  assert.fileContent('LICENSE', 'Your Name')
+})

@@ -20,6 +20,11 @@ module.exports = class extends Generator {
       name: 'githubUsername',
       message: 'GitHub Username:',
       store: true
+    }, {
+      name: 'userName',
+      message: 'Name:',
+      default: this.user.git.name(),
+      store: true
     }]
 
     return this.prompt(prompts).then(answers => {

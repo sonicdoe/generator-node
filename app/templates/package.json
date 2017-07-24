@@ -7,7 +7,7 @@
   ],
   "license": "ISC",
   "repository": "<%= githubUsername %>/<%= name %>",
-  "author": "Jakob Krigovsky <jakob@krigovsky.com>",
+  "author": "<%= userName %> <jakob@krigovsky.com>",
   "files": [],
   "scripts": {
     "test": "standard && ava"
