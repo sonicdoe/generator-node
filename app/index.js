@@ -7,6 +7,9 @@ module.exports = class extends Generator {
     const prompts = [{
       name: 'name',
       message: 'Package Name:'
+    }, {
+      name: 'description',
+      message: 'Description:'
     }]
 
     return this.prompt(prompts).then(answers => {

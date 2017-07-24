@@ -1,7 +1,7 @@
 {
   "name": "<%= name %>",
   "version": "0.0.0",
-  "description": "My short description of my awesome package",
+  "description": "<%= description %>",
   "keywords": [
     "short",
     "relevant",

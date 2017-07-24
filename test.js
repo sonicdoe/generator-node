@@ -34,3 +34,12 @@ test('uses prompt input for package.json’s `repository` field', async t => {
 
   assert.fileContent('package.json', '"repository": "sonicdoe/my-awesome-package"')
 })
+
+test('uses prompt input for package.json’s `description` field', async t => {
+  await helpers.run(appPath)
+    .withPrompts({
+      description: 'My short description of my awesome package'
+    })
+
+  assert.fileContent('package.json', '"description": "My short description of my awesome package"')
+})
