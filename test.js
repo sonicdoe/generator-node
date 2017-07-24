@@ -60,10 +60,11 @@ test('uses prompt input for package.json’s `keywords` field', async t => {
 test('uses prompt input for package.json’s `author` field', async t => {
   await helpers.run(appPath)
     .withPrompts({
-      userName: 'Your Name'
+      userName: 'Your Name',
+      emailAddress: 'you@example.com'
     })
 
-  assert.fileContent('package.json', '"author": "Your Name ')
+  assert.fileContent('package.json', '"author": "Your Name <you@example.com>"')
 })
 
 test('uses prompt input for LICENSE', async t => {
