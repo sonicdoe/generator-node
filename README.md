@@ -1,4 +1,4 @@
-# generator-node
+# generator-node [![Build Status](https://img.shields.io/travis/sonicdoe/generator-node.svg)](https://travis-ci.org/sonicdoe/generator-node)
 
 > Scaffold out a Node.js module
 
