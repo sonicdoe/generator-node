@@ -57,6 +57,10 @@ module.exports = class extends Generator {
   }
 
   end () {
+    if (process.env.NODE_ENV === 'test') {
+      return
+    }
+
     const args = process.argv.slice(3)
     const pkg = readPkgUp.sync({ cwd: __dirname }).pkg
     const name = pkg.name

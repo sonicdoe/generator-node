@@ -18,7 +18,7 @@
     "app"
   ],
   "scripts": {
-    "test": "standard && ava"
+    "test": "standard && NODE_ENV=test ava"
   },
   "dependencies": {
     "read-pkg-up": "^2.0.0",
