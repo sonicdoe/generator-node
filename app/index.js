@@ -16,6 +16,10 @@ module.exports = class extends Generator {
       name: 'keywords',
       message: 'Keywords:',
       filter: words => splitComma(words)
+    }, {
+      name: 'githubUsername',
+      message: 'GitHub Username:',
+      store: true
     }]
 
     return this.prompt(prompts).then(answers => {

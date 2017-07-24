@@ -6,7 +6,7 @@
     <%- keywords && keywords.map(word => `"${word}"`).join(',\n    ') %>
   ],
   "license": "ISC",
-  "repository": "sonicdoe/<%= name %>",
+  "repository": "<%= githubUsername %>/<%= name %>",
   "author": "Jakob Krigovsky <jakob@krigovsky.com>",
   "files": [],
   "scripts": {
