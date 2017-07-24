@@ -1,6 +1,7 @@
 'use strict'
 
 const Generator = require('yeoman-generator')
+const readPkgUp = require('read-pkg-up')
 
 const splitComma = require('./split-comma')
 
@@ -53,5 +54,26 @@ module.exports = class extends Generator {
 
   install () {
     this.npmInstall()
+  }
+
+  end () {
+    const args = process.argv.slice(3)
+    const pkg = readPkgUp.sync({ cwd: __dirname }).pkg
+    const name = pkg.name
+    const version = pkg.version
+
+    process.stdout.write(`Generated using ${name} v${version} with `)
+
+    if (args.length > 0) {
+      process.stdout.write('`' + args.join(' ') + '` and ')
+    }
+
+    console.log('the following answers:\n')
+
+    for (const name in this.answers) {
+      const answer = this.answers[name]
+
+      console.log(`- ${name}: ${answer}`)
+    }
   }
 }

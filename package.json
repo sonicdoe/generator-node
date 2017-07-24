@@ -21,6 +21,7 @@
     "test": "standard && ava"
   },
   "dependencies": {
+    "read-pkg-up": "^2.0.0",
     "yeoman-generator": "^1.1.1"
   },
   "devDependencies": {
