@@ -36,6 +36,7 @@
     "access": "public"
   },
   "ava": {
-    "failWithoutAssertions": false
+    "failWithoutAssertions": false,
+    "serial": true
   }
 }
