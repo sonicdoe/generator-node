@@ -3,11 +3,7 @@
   "version": "0.0.0",
   "description": "<%= description %>",
   "keywords": [
-    "short",
-    "relevant",
-    "keywords",
-    "for",
-    "searching"
+    <%- keywords && keywords.map(word => `"${word}"`).join(',\n    ') %>
   ],
   "license": "ISC",
   "repository": "sonicdoe/<%= name %>",

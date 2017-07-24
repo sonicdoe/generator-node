@@ -43,3 +43,15 @@ test('uses prompt input for package.json’s `description` field', async t => {
 
   assert.fileContent('package.json', '"description": "My short description of my awesome package"')
 })
+
+test('uses prompt input for package.json’s `keywords` field', async t => {
+  await helpers.run(appPath)
+    .withPrompts({
+      keywords: [
+        'short',
+        'relevant'
+      ]
+    })
+
+  assert.fileContent('package.json', '"keywords": [\n    "short",\n    "relevant"\n  ]')
+})

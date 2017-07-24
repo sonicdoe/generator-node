@@ -2,6 +2,8 @@
 
 const Generator = require('yeoman-generator')
 
+const splitComma = require('./split-comma')
+
 module.exports = class extends Generator {
   prompting () {
     const prompts = [{
@@ -10,6 +12,10 @@ module.exports = class extends Generator {
     }, {
       name: 'description',
       message: 'Description:'
+    }, {
+      name: 'keywords',
+      message: 'Keywords:',
+      filter: words => splitComma(words)
     }]
 
     return this.prompt(prompts).then(answers => {
