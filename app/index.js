@@ -63,6 +63,8 @@ module.exports = class extends Generator {
   }
 
   end () {
+    this.fs.delete(this.destinationPath('.yo-rc.json'))
+
     if (process.env.NODE_ENV === 'test') {
       return
     }
