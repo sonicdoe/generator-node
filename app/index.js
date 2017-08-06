@@ -46,9 +46,15 @@ module.exports = class extends Generator {
       {},
       {
         globOptions: {
-          dot: true
+          dot: true,
+          ignore: this.templatePath('gitignore')
         }
       }
+    )
+
+    this.fs.copy(
+      this.templatePath('gitignore'),
+      this.destinationPath('.gitignore')
     )
   }
 
