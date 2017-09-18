@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "read-pkg-up": "^2.0.0",
-    "yeoman-generator": "^1.1.1"
+    "yeoman-generator": "^2.0.0"
   },
   "devDependencies": {
     "ava": "^0.21.0",
