@@ -31,7 +31,7 @@
     "yeoman-test": "^1.7.0"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "publishConfig": {
     "access": "public"

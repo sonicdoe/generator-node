@@ -17,6 +17,6 @@
     "standard": "^10.0.3"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   }
 }
